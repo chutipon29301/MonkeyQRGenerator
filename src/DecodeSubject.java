@@ -15,4 +15,75 @@
  */
 
 public class DecodeSubject {
+    private String subjectCode;
+    private String commonPath = "file://monkeycloud/key-qrcode/";
+    private String destinationSkillPath, destinationHwPath, destinationTestPath;
+    private String destinationHotkeyPath = "file://monkeycloud/key-student/";
+
+    public DecodeSubject(String subjectCode) {
+        this.subjectCode = subjectCode;
+        decode();
+    }
+
+    public String getDestinationSkillPath(){
+        return destinationSkillPath;
+    }
+
+    public String getDestinationHwPath() {
+        return destinationHwPath;
+    }
+
+    public String getDestinationTestPath() {
+        return destinationTestPath;
+    }
+
+    public String getDestinationHotkeyPath() {
+        return destinationHotkeyPath;
+    }
+
+    private boolean decode() {
+        switch (subjectCode.charAt(0)) {
+            case 'M':
+                commonPath += "MATH/";
+                destinationHotkeyPath += "MATH/";
+                ;
+                break;
+            case 'P':
+                commonPath += "PHYSICS/";
+                destinationHotkeyPath += "PHYSICS/";
+                break;
+            default:
+                return false;
+        }
+        commonPath += subjectCode.substring(0, getIndexOfFirstNum() - 1) + "/";
+        destinationHotkeyPath += subjectCode.substring(0, getIndexOfFirstNum() - 1) + "/";
+
+
+        commonPath += subjectCode.substring(0, getIndexOfFirstNum() - 1)
+                + subjectCode.substring(subjectCode.indexOf('('), subjectCode.lastIndexOf('_'))
+                + ")/"
+                + subjectCode.substring(0, subjectCode.indexOf('('))
+                + "/"
+                + subjectCode.substring(0, subjectCode.indexOf('('));
+        destinationHotkeyPath += subjectCode.substring(0, subjectCode.indexOf('('))
+                + "/";
+        destinationSkillPath = commonPath + "SKILLKEY" + subjectCode.substring(subjectCode.indexOf('('), subjectCode.indexOf(')') + 1) + ".pdf";
+        destinationHwPath = commonPath + "HWKEY" + subjectCode.substring(subjectCode.indexOf('('), subjectCode.indexOf(')') + 1) + ".pdf";
+        destinationTestPath = commonPath + "TESTKEY" + subjectCode.substring(subjectCode.indexOf('('), subjectCode.indexOf(')') + 1) + ".pdf";
+        destinationHotkeyPath += subjectCode.substring(0, subjectCode.indexOf('(')) + "HOTKEY" + subjectCode.substring(subjectCode.indexOf('('), subjectCode.indexOf(')') + 1) + ".pdf";
+        return true;
+    }
+
+    private int getIndexOfFirstNum() {
+        int index = subjectCode.length();
+        for (int i = 0; i < 10; i++) {
+            try {
+                int temp = subjectCode.indexOf((char) (48 + i));
+                if (temp == -1) continue;
+                if (temp < index) index = temp;
+            } catch (Exception ignored) {
+            }
+        }
+        return index;
+    }
 }
