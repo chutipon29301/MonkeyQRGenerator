@@ -29,6 +29,7 @@ import java.io.IOException;
 import java.util.EnumMap;
 import java.util.Map;
 
+@SuppressWarnings("SpellCheckingInspection")
 public class QRGenerator {
     private String myCodeText;
 

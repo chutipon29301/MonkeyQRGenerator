@@ -81,6 +81,6 @@ public class Index extends JFrame {
 
 	private void generate(){
 	    String inputText = textField.getText();
-
+        textField.setText("");
     }
 }

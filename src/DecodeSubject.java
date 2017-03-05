@@ -14,6 +14,7 @@
  limitations under the License.
  */
 
+@SuppressWarnings("SpellCheckingInspection")
 public class DecodeSubject {
     private String subjectCode;
     private String commonPath = "file://monkeycloud/key-qrcode/";
