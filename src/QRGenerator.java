@@ -56,18 +56,18 @@ public class QRGenerator {
             QRCodeWriter qrCodeWriter = new QRCodeWriter();
             BitMatrix byteMatrix = qrCodeWriter.encode(myCodeText, BarcodeFormat.QR_CODE, size,
                     size, hintMap);
-            int CrunchifyWidth = byteMatrix.getWidth();
-            BufferedImage image = new BufferedImage(CrunchifyWidth, CrunchifyWidth,
+            int qrCodeWidth = byteMatrix.getWidth();
+            BufferedImage image = new BufferedImage(qrCodeWidth, qrCodeWidth,
                     BufferedImage.TYPE_INT_RGB);
             image.createGraphics();
 
             Graphics2D graphics = (Graphics2D) image.getGraphics();
             graphics.setColor(Color.WHITE);
-            graphics.fillRect(0, 0, CrunchifyWidth, CrunchifyWidth);
+            graphics.fillRect(0, 0, qrCodeWidth, qrCodeWidth);
             graphics.setColor(Color.BLACK);
 
-            for (int i = 0; i < CrunchifyWidth; i++) {
-                for (int j = 0; j < CrunchifyWidth; j++) {
+            for (int i = 0; i < qrCodeWidth; i++) {
+                for (int j = 0; j < qrCodeWidth; j++) {
                     if (byteMatrix.get(i, j)) {
                         graphics.fillRect(i, j, 1, 1);
                     }
