@@ -15,30 +15,30 @@
  */
 
 @SuppressWarnings("SpellCheckingInspection")
-public class DecodeSubject {
+class DecodeSubject {
     private String subjectCode;
     private String commonPath = "file://monkeycloud/key-qrcode/";
     private String destinationSkillPath, destinationHwPath, destinationTestPath;
     private String destinationHotkeyPath = "file://monkeycloud/key-student/";
 
-    public DecodeSubject(String subjectCode) {
+    DecodeSubject(String subjectCode) {
         this.subjectCode = subjectCode;
         decode();
     }
 
-    public String getDestinationSkillPath() {
+    String getDestinationSkillPath() {
         return destinationSkillPath;
     }
 
-    public String getDestinationHwPath() {
+    String getDestinationHwPath() {
         return destinationHwPath;
     }
 
-    public String getDestinationTestPath() {
+    String getDestinationTestPath() {
         return destinationTestPath;
     }
 
-    public String getDestinationHotkeyPath() {
+    String getDestinationHotkeyPath() {
         return destinationHotkeyPath;
     }
 
