@@ -68,10 +68,17 @@ public class DecodeSubject {
                 + subjectCode.substring(0, subjectCode.indexOf('('));
         destinationHotkeyPath += subjectCode.substring(0, subjectCode.indexOf('('))
                 + "/";
-        destinationSkillPath = commonPath + "SKILLKEY" + subjectCode.substring(subjectCode.indexOf('('), subjectCode.indexOf(')') + 1) + ".pdf";
-        destinationHwPath = commonPath + "HWKEY" + subjectCode.substring(subjectCode.indexOf('('), subjectCode.indexOf(')') + 1) + ".pdf";
-        destinationTestPath = commonPath + "TESTKEY" + subjectCode.substring(subjectCode.indexOf('('), subjectCode.indexOf(')') + 1) + ".pdf";
-        destinationHotkeyPath += subjectCode.substring(0, subjectCode.indexOf('(')) + "HOTKEY" + subjectCode.substring(subjectCode.indexOf('('), subjectCode.indexOf(')') + 1) + ".pdf";
+        destinationSkillPath = commonPath
+                + "SKILLKEY"
+                + subjectCode.substring(subjectCode.indexOf('('), subjectCode.indexOf(')') + 1) + ".pdf";
+        destinationHwPath = commonPath
+                + "HWKEY"
+                + subjectCode.substring(subjectCode.indexOf('('), subjectCode.indexOf(')') + 1) + ".pdf";
+        destinationTestPath = commonPath
+                + "TESTKEY"
+                + subjectCode.substring(subjectCode.indexOf('('), subjectCode.indexOf(')') + 1) + ".pdf";
+        destinationHotkeyPath += subjectCode.substring(0, subjectCode.indexOf('('))
+                + "HOTKEY" + subjectCode.substring(subjectCode.indexOf('('), subjectCode.indexOf(')') + 1) + ".pdf";
         return true;
     }
 

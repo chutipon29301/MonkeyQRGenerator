@@ -19,14 +19,20 @@ import java.awt.EventQueue;
 import javax.swing.*;
 import javax.swing.border.EmptyBorder;
 import java.awt.Font;
+import java.util.ArrayList;
 
-public class Summary extends JFrame {
+class Summary extends JFrame {
+
+    private static String levelName;
+    private static String levelCode;
+    private static String levelRev;
 
     /**
-	 * Launch the application.
-	 */
-	public static void run() {
-		EventQueue.invokeLater(() -> {
+     * Launch the application.
+     */
+    static void run(String levelName) {
+        Summary.levelName = levelName;
+        EventQueue.invokeLater(() -> {
             try {
                 Summary frame = new Summary();
                 frame.setVisible(true);
@@ -34,29 +40,47 @@ public class Summary extends JFrame {
                 e.printStackTrace();
             }
         });
-	}
+    }
 
-	/**
-	 * Create the frame.
-	 */
+    /**
+     * Create the frame.
+     */
     private Summary() {
-		setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
-		setBounds(100, 100, 450, 300);
+        setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
+        setBounds(100, 100, 450, 300);
         JPanel contentPane = new JPanel();
-		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
-		setContentPane(contentPane);
-		contentPane.setLayout(null);
-		
-		JLabel lblTheFollowingFile = new JLabel("The following file has been created.");
-		lblTheFollowingFile.setFont(new Font("Cordia New", Font.PLAIN, 18));
-		lblTheFollowingFile.setBounds(10, 11, 245, 26);
-		contentPane.add(lblTheFollowingFile);
-		
-		JLabel lblNewLabel = new JLabel("New label");
-		lblNewLabel.setVerticalAlignment(SwingConstants.TOP);
-		lblNewLabel.setFont(new Font("Cordia New", Font.PLAIN, 18));
-		lblNewLabel.setBounds(37, 48, 361, 202);
-		contentPane.add(lblNewLabel);
-	}
+        contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
+        setContentPane(contentPane);
+        contentPane.setLayout(null);
+
+        setLevelCode();
+        setLevelRev();
+
+        JLabel lblTheFollowingFile = new JLabel("The following file has been created.");
+        lblTheFollowingFile.setFont(new Font("Cordia New", Font.PLAIN, 18));
+        lblTheFollowingFile.setBounds(10, 11, 245, 26);
+        contentPane.add(lblTheFollowingFile);
+
+        ArrayList<JLabel> label = new ArrayList<>();
+
+        label.add(new JLabel("- " + levelCode + "SKILLKEY" + levelRev + ".pdf"));
+        label.add(new JLabel("- " + levelCode + "HWKEY" + levelRev + ".pdf"));
+        label.add(new JLabel("- " + levelCode + "TESTKEY" + levelRev + ".pdf"));
+
+        for (int i = 0; i < label.size(); i++) {
+            label.get(i).setVerticalAlignment(SwingConstants.TOP);
+            label.get(i).setFont(new Font("Cordia New", Font.PLAIN, 18));
+            label.get(i).setBounds(37, 48 + (i * 30), 361, 202);
+            contentPane.add(label.get(i));
+        }
+    }
+
+    private void setLevelCode() {
+        levelCode = levelName.substring(0, levelName.indexOf('('));
+    }
+
+    private void setLevelRev() {
+        levelRev = levelName.substring(levelName.indexOf('('));
+    }
 
 }
