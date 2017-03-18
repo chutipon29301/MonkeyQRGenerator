@@ -23,6 +23,8 @@ import javax.swing.border.EmptyBorder;
 
 public class Index extends JFrame {
 
+    static final String KEY_LOCATION = "//monkeycloud/key-qrcode/";
+
     private JTextField textField;
 
     /**
@@ -81,7 +83,10 @@ public class Index extends JFrame {
 
     private void generate() {
         String inputText = textField.getText();
+        FileUtil testValid = new FileUtil(inputText);
         textField.setText("");
-        Summary.run(inputText);
+        if (testValid.isValid()) {
+            Summary.run(inputText);
+        }
     }
 }

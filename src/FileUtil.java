@@ -14,11 +14,51 @@
  limitations under the License.
  */
 
-public class FileUtil {
-    public FileUtil(String levelcode){
+import java.io.File;
 
+public class FileUtil {
+
+    String levelCode;
+    private String skillPath, hwPath, testPath, hotKeyPath;
+
+    FileUtil(String levelCode){
+        this.levelCode = levelCode;
     }
+
     public void generate(){
 
+    }
+
+    boolean isValid(){
+        getFilePath();
+        return isSkillPathExist() && isHwPathExist() && isTestPathExist() && isHotKeyPathExist();
+    }
+    
+    private void getFilePath(){
+        DecodeSubject decoder = new DecodeSubject(levelCode);
+        skillPath = decoder.getDestinationSkillPath().replace("file://monkeycloud", "\\\\192.168.1.150").replace('/', '\\');
+        hwPath = decoder.getDestinationHwPath().replace("file://monkeycloud", "\\\\192.168.1.150").replace('/', '\\');
+        testPath = decoder.getDestinationTestPath().replace("file://monkeycloud", "\\\\192.168.1.150").replace('/', '\\');
+        hotKeyPath = decoder.getDestinationHotkeyPath().replace("file://monkeycloud", "\\\\192.168.1.150").replace('/', '\\');
+    }
+
+    private boolean isSkillPathExist(){
+        File temp = new File(skillPath);
+        return temp.exists();
+    }
+
+    private boolean isHwPathExist(){
+        File temp = new File(hwPath);
+        return temp.exists();
+    }
+
+    private boolean isTestPathExist(){
+        File temp = new File(testPath);
+        return temp.exists();
+    }
+
+    private boolean isHotKeyPathExist(){
+        File temp = new File(hotKeyPath);
+        return temp.exists();
     }
 }
