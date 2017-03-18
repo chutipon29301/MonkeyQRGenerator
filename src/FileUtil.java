@@ -18,7 +18,7 @@ import java.io.File;
 
 public class FileUtil {
 
-    String levelCode;
+    private String levelCode;
     private String skillPath, hwPath, testPath, hotKeyPath;
 
     FileUtil(String levelCode){
@@ -31,9 +31,9 @@ public class FileUtil {
 
     boolean isValid(){
         getFilePath();
-        return isSkillPathExist() && isHwPathExist() && isTestPathExist() && isHotKeyPathExist();
+        return !(isSkillPathExist() || isHwPathExist() || isTestPathExist() || isHotKeyPathExist());
     }
-    
+
     private void getFilePath(){
         DecodeSubject decoder = new DecodeSubject(levelCode);
         skillPath = decoder.getDestinationSkillPath().replace("file://monkeycloud", "\\\\192.168.1.150").replace('/', '\\');

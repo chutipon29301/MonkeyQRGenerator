@@ -94,13 +94,4 @@ public class DecodeSubject {
         }
         return index;
     }
-
-    public static void main(String[] args) {
-        DecodeSubject temp = new DecodeSubject("MH-BB01(REV1_0)");
-        System.out.println(temp.getDestinationSkillPath());
-        System.out.println(temp.getDestinationHwPath());
-        System.out.println(temp.getDestinationTestPath());
-        System.out.println(temp.getDestinationHotkeyPath());
-        System.out.println(temp.getDestinationHotkeyPath().replace("file://monkeycloud", "\\\\192.168.1.150").replace('/', '\\'));
-    }
 }

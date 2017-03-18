@@ -63,9 +63,9 @@ class Summary extends JFrame {
 
         ArrayList<JLabel> label = new ArrayList<>();
 
-        label.add(new JLabel("- " + levelCode + "SKILLKEY" + levelRev + ".pdf"));
-        label.add(new JLabel("- " + levelCode + "HWKEY" + levelRev + ".pdf"));
-        label.add(new JLabel("- " + levelCode + "TESTKEY" + levelRev + ".pdf"));
+        label.add(new JLabel("-  " + levelCode + "SKILLKEY" + levelRev + ".pdf"));
+        label.add(new JLabel("-  " + levelCode + "HWKEY" + levelRev + ".pdf"));
+        label.add(new JLabel("-  " + levelCode + "TESTKEY" + levelRev + ".pdf"));
 
         for (int i = 0; i < label.size(); i++) {
             label.get(i).setVerticalAlignment(SwingConstants.TOP);
