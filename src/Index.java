@@ -86,6 +86,7 @@ public class Index extends JFrame {
         FileUtil testValid = new FileUtil(inputText);
         textField.setText("");
         if (testValid.isValid()) {
+            testValid.generate();
             Summary.run(inputText);
         }
     }
