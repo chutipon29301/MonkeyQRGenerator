@@ -45,8 +45,7 @@ class FileUtil {
 
     boolean isValid() {
         getFilePath();
-//        return !(isSkillPathExist() || isHwPathExist() || isTestPathExist() || isHotKeyPathExist());
-        return true;
+        return !(isSkillPathExist() || isHwPathExist() || isTestPathExist() || isHotKeyPathExist());
     }
 
     private void getFilePath() {

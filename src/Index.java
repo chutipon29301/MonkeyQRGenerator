@@ -95,19 +95,29 @@ public class Index extends JFrame {
         String inputText = textField.getText();
         FileUtil testValid = new FileUtil(inputText);
         textField.setText("");
-        if (testValid.isValid()) {
-            testValid.generate();
-            Summary.run(inputText);
+        LevelCode inputValid = new LevelCode(inputText);
+        if (inputValid.isValid()) {
+            if (testValid.isValid()) {
+                testValid.generate();
+                Summary.run(inputText);
+            } else {
+                JOptionPane.showMessageDialog(null, "Can't create QRCode, key already exist", "Error: File already exist", JOptionPane.INFORMATION_MESSAGE);
+            }
         } else {
-            JOptionPane.showMessageDialog(null, "Can't create QRCode, key already exist", "Error: File already exist", JOptionPane.INFORMATION_MESSAGE);
+            JOptionPane.showMessageDialog(null, "Can't create QRCode, wrong level format", "Error: Wrong level format", JOptionPane.INFORMATION_MESSAGE);
         }
     }
 
     private void generateQR() {
         String inputText = textField.getText();
-        FileUtil testValid = new FileUtil(inputText);
+        FileUtil generator = new FileUtil(inputText);
         textField.setText("");
-        testValid.generate();
-        Summary.run(inputText);
+        LevelCode inputValid = new LevelCode(inputText);
+        if (inputValid.isValid()) {
+            generator.generate();
+            Summary.run(inputText);
+        } else {
+            JOptionPane.showMessageDialog(null, "Can't create QRCode, wrong level format", "Error: Wrong level format", JOptionPane.INFORMATION_MESSAGE);
+        }
     }
 }
