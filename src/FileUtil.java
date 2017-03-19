@@ -16,25 +16,25 @@
 
 import java.io.File;
 
-public class FileUtil {
+class FileUtil {
 
     private String levelCode;
     private String skillPath, hwPath, testPath, hotKeyPath;
 
-    FileUtil(String levelCode){
+    FileUtil(String levelCode) {
         this.levelCode = levelCode;
     }
 
-    public void generate(){
+    void generate() {
 
     }
 
-    boolean isValid(){
+    boolean isValid() {
         getFilePath();
         return !(isSkillPathExist() || isHwPathExist() || isTestPathExist() || isHotKeyPathExist());
     }
 
-    private void getFilePath(){
+    private void getFilePath() {
         DecodeSubject decoder = new DecodeSubject(levelCode);
         skillPath = decoder.getDestinationSkillPath().replace("file://monkeycloud", "\\\\192.168.1.150").replace('/', '\\');
         hwPath = decoder.getDestinationHwPath().replace("file://monkeycloud", "\\\\192.168.1.150").replace('/', '\\');
@@ -42,22 +42,22 @@ public class FileUtil {
         hotKeyPath = decoder.getDestinationHotkeyPath().replace("file://monkeycloud", "\\\\192.168.1.150").replace('/', '\\');
     }
 
-    private boolean isSkillPathExist(){
+    private boolean isSkillPathExist() {
         File temp = new File(skillPath);
         return temp.exists();
     }
 
-    private boolean isHwPathExist(){
+    private boolean isHwPathExist() {
         File temp = new File(hwPath);
         return temp.exists();
     }
 
-    private boolean isTestPathExist(){
+    private boolean isTestPathExist() {
         File temp = new File(testPath);
         return temp.exists();
     }
 
-    private boolean isHotKeyPathExist(){
+    private boolean isHotKeyPathExist() {
         File temp = new File(hotKeyPath);
         return temp.exists();
     }

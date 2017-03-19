@@ -47,7 +47,6 @@ class DecodeSubject {
             case 'M':
                 commonPath += "MATH/";
                 destinationHotkeyPath += "MATH/";
-                ;
                 break;
             case 'P':
                 commonPath += "PHYSICS/";

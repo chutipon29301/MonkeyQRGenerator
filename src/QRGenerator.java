@@ -33,12 +33,12 @@ import java.util.Map;
 public class QRGenerator {
     private String myCodeText;
 
-    public QRGenerator(String pathName){
+    public QRGenerator(String pathName) {
         myCodeText = pathName;
     }
 
     @SuppressWarnings("SuspiciousNameCombination")
-    public void saveTo(String filePath){
+    public void saveTo(String filePath) {
 //        myCodeText = "file://monkeycloud/key-qrcode/MATH/MK-D/MK-D(REV1)/MK-DB06/MK-DB06aSKILLKEY(REV1_0).pdf";
 //        String filePath = "C:\\Users\\adminmac\\Desktop\\New folder\\temp.png";
         int size = 250;
