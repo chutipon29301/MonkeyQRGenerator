@@ -26,32 +26,6 @@ class DecodeSubject {
         decode();
     }
 
-    public static void main(String[] args) {
-
-        DecodeSubject a = new DecodeSubject("MK-BB02b(REV1_0).");
-        System.out.println("OUT:\t" + a.getDestinationSkillPath());
-        System.out.println("IN:\t\tfile://monkeycloud/key-qrcode/MATH/MK-B/MK-B(REV1)/MK-BB02/MK-BB02bSKILLKEY(REV1_0).pdf");
-        System.out.println("file://monkeycloud/key-qrcode/MATH/MK-B/MK-B(REV1)/MK-BB02/MK-BB02bSKILLKEY(REV1_0).pdf".equals(a.getDestinationSkillPath()));
-        System.out.println("--------------------------------------------------------------------------------------------------------");
-
-        DecodeSubject b = new DecodeSubject("MK-AB09a(REV1_0)");
-        System.out.println("OUT:\t" + b.getDestinationHotkeyPath());
-        System.out.println("IN:\t\tfile://monkeycloud/key-student/MATH/MK-A/MK-AB09/MK-AB09a/MK-AB09aHOTKEY(REV1_0).pdf");
-        System.out.println("file://monkeycloud/key-student/MATH/MK-A/MK-AB09/MK-AB09a/MK-AB09aHOTKEY(REV1_0).pdf".equals(b.getDestinationHotkeyPath()));
-        System.out.println("--------------------------------------------------------------------------------------------------------");
-
-        DecodeSubject c = new DecodeSubject("MJ-XGA04(REV2_0)");
-        System.out.println("OUT:\t" + c.getDestinationHotkeyPath());
-        System.out.println("IN:\t\tfile://monkeycloud/key-student/MATH/MJ-XG/MJ-XG(REV2)/MJ-XGA04/MJ-XGA04HOTKEY(REV2_0).pdf");
-        System.out.println("file://monkeycloud/key-student/MATH/MJ-XG/MJ-XG(REV2)/MJ-XGA04/MJ-XGA04HOTKEY(REV2_0).pdf".equals(c.getDestinationHotkeyPath()));
-        System.out.println("--------------------------------------------------------------------------------------------------------");
-
-        DecodeSubject d = new DecodeSubject("MJ-XGA04(REV2_0)");
-        System.out.println("OUT:\t" + d.getDestinationSkillPath());
-        System.out.println("IN:\t\tfile://monkeycloud/key-qrcode/MATH/MJ-XG/MJ-XG(REV2)/MJ-XGA04/MJ-XGA04SKILLKEY(REV2_0).pdf");
-        System.out.println("file://monkeycloud/key-qrcode/MATH/MJ-XG/MJ-XG(REV2)/MJ-XGA04/MJ-XGA04SKILLKEY(REV2_0).pdf".equals(d.getDestinationSkillPath()));
-    }
-
     String getDestinationSkillPath() {
         return destinationSkillPath;
     }
