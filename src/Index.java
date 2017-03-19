@@ -22,7 +22,7 @@ import javax.swing.*;
 import javax.swing.border.EmptyBorder;
 
 public class Index extends JFrame {
-    
+
     private JTextField textField;
 
     /**

@@ -36,6 +36,15 @@ class PDFUtil {
             try {
                 doc.save(path);
             } catch (IOException e) {
+                System.out.println("Path doesn't existed");
+                String dir = path.substring(0, path.lastIndexOf('\\'));
+                File temp = new File(dir);
+                //noinspection ResultOfMethodCallIgnored
+                temp.mkdirs();
+                try {
+                    doc.save(path);
+                } catch (IOException ignored) {
+                }
                 return false;
             } finally {
                 try {
