@@ -39,8 +39,6 @@ class QRGenerator {
 
     @SuppressWarnings("SuspiciousNameCombination")
     void saveTo(String filePath) {
-//        myCodeText = "file://monkeycloud/key-qrcode/MATH/MK-D/MK-D(REV1)/MK-DB06/MK-DB06aSKILLKEY(REV1_0).pdf";
-//        String filePath = "C:\\Users\\adminmac\\Desktop\\New folder\\temp.png";
         int size = 250;
         String fileType = "png";
         File myFile = new File(filePath);
@@ -78,5 +76,9 @@ class QRGenerator {
             e.printStackTrace();
         }
         System.out.println("File saved:" + filePath);
+    }
+
+    String getPathName(){
+        return myCodeText;
     }
 }

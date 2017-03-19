@@ -2,6 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5bae2a03-9ecf-4378-8e6c-eb0a6f41f602" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/PDFUtil.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/FileUtil.class" afterPath="$PROJECT_DIR$/bin/FileUtil.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/QRGenerator.class" afterPath="$PROJECT_DIR$/bin/QRGenerator.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/Summary.class" afterPath="$PROJECT_DIR$/bin/Summary.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/MonkeyQRGenerator.iml" afterPath="$PROJECT_DIR$/MonkeyQRGenerator.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/FileUtil.java" afterPath="$PROJECT_DIR$/src/FileUtil.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/QRGenerator.java" afterPath="$PROJECT_DIR$/src/QRGenerator.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Summary.java" afterPath="$PROJECT_DIR$/src/Summary.java" />
     </list>
     <ignored path="$PROJECT_DIR$/bin/" />
@@ -21,7 +29,7 @@
       <file leaf-file-name="Index.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Index.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="425">
+            <state relative-caret-position="-799">
               <caret line="25" column="24" lean-forward="false" selection-start-line="25" selection-start-column="24" selection-end-line="25" selection-end-column="24" />
               <folding>
                 <element signature="e#0#4120#0" expanded="true" />
@@ -33,28 +41,45 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Summary.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Summary.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Summary.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="482">
-              <caret line="68" column="53" lean-forward="false" selection-start-line="68" selection-start-column="53" selection-end-line="68" selection-end-column="53" />
+            <state relative-caret-position="788">
+              <caret line="66" column="54" lean-forward="false" selection-start-line="66" selection-start-column="54" selection-end-line="66" selection-end-column="54" />
               <folding>
-                <element signature="e#0#2803#0" expanded="true" />
+                <element signature="e#0#2848#0" expanded="true" />
                 <element signature="imports" expanded="true" />
+                <element signature="e#710#754#1" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="FileUtil.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="FileUtil.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/FileUtil.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="393">
-              <caret line="50" column="37" lean-forward="false" selection-start-line="50" selection-start-column="37" selection-end-line="50" selection-end-column="37" />
+            <state relative-caret-position="788">
+              <caret line="73" column="13" lean-forward="true" selection-start-line="73" selection-start-column="13" selection-end-line="73" selection-end-column="13" />
               <folding>
-                <element signature="e#0#3006#0" expanded="true" />
+                <element signature="e#0#3369#0" expanded="true" />
                 <element signature="imports" expanded="true" />
-                <element signature="e#759#760#0" expanded="true" />
+                <element signature="e#619#663#1" expanded="true" />
+                <element signature="e#804#805#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="PDFUtil.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/PDFUtil.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="210">
+              <caret line="22" column="0" lean-forward="false" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
+              <folding>
+                <element signature="e#0#1412#0" expanded="true" />
+                <element signature="imports" expanded="true" />
+                <element signature="e#774#775#0" expanded="true" />
+                <element signature="e#806#807#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -63,7 +88,7 @@
       <file leaf-file-name="LevelCode.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/LevelCode.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="227">
+            <state relative-caret-position="312">
               <caret line="29" column="5" lean-forward="false" selection-start-line="29" selection-start-column="5" selection-end-line="29" selection-end-column="5" />
               <folding>
                 <element signature="e#0#3101#0" expanded="true" />
@@ -76,7 +101,7 @@
       <file leaf-file-name="DecodeSubject.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/DecodeSubject.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="293">
+            <state relative-caret-position="601">
               <caret line="47" column="33" lean-forward="false" selection-start-line="47" selection-start-column="33" selection-end-line="47" selection-end-column="33" />
               <folding>
                 <element signature="e#0#4524#0" expanded="true" />
@@ -90,10 +115,12 @@
       <file leaf-file-name="QRGenerator.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/QRGenerator.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="214">
-              <caret line="31" column="44" lean-forward="false" selection-start-line="31" selection-start-column="44" selection-end-line="31" selection-end-column="44" />
+            <state relative-caret-position="737">
+              <caret line="81" column="26" lean-forward="false" selection-start-line="81" selection-start-column="26" selection-end-line="81" selection-end-column="26" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="e#2925#2926#0" expanded="true" />
+                <element signature="e#2958#2959#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -128,10 +155,11 @@
         <option value="$PROJECT_DIR$/src/QRGenrerator.java" />
         <option value="$PROJECT_DIR$/src/Index.java" />
         <option value="$PROJECT_DIR$/src/LevelCode.java" />
-        <option value="$PROJECT_DIR$/src/QRGenerator.java" />
-        <option value="$PROJECT_DIR$/src/FileUtil.java" />
         <option value="$PROJECT_DIR$/src/DecodeSubject.java" />
         <option value="$PROJECT_DIR$/src/Summary.java" />
+        <option value="$PROJECT_DIR$/src/QRGenerator.java" />
+        <option value="$PROJECT_DIR$/src/FileUtil.java" />
+        <option value="$PROJECT_DIR$/src/PDFUtil.java" />
       </list>
     </option>
   </component>
@@ -190,30 +218,15 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="last_opened_file_path" value="$USER_HOME$/Downloads/core-3.2.1.jar!/" />
+    <property name="last_opened_file_path" value="C:/download/pdfbox-app-2.0.4.jar!/" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.2" />
   </component>
-  <component name="RunManager" selected="Application.Index">
+  <component name="RunManager" selected="Application.PDFUtil">
     <configuration default="false" name="Index" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <option name="MAIN_CLASS_NAME" value="Index" />
-      <option name="VM_PARAMETERS" />
-      <option name="PROGRAM_PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="ENABLE_SWING_INSPECTOR" value="false" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <module name="MonkeyQRGenerator" />
-      <envs />
-      <method />
-    </configuration>
-    <configuration default="false" name="Summary" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <option name="MAIN_CLASS_NAME" value="Summary" />
       <option name="VM_PARAMETERS" />
       <option name="PROGRAM_PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
@@ -259,6 +272,21 @@
     <configuration default="false" name="LevelCode" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <option name="MAIN_CLASS_NAME" value="LevelCode" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="MonkeyQRGenerator" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="false" name="PDFUtil" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <option name="MAIN_CLASS_NAME" value="PDFUtil" />
       <option name="VM_PARAMETERS" />
       <option name="PROGRAM_PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
@@ -477,18 +505,18 @@
     </configuration>
     <list size="5">
       <item index="0" class="java.lang.String" itemvalue="Application.Index" />
-      <item index="1" class="java.lang.String" itemvalue="Application.Summary" />
-      <item index="2" class="java.lang.String" itemvalue="Application.DecodeSubject" />
-      <item index="3" class="java.lang.String" itemvalue="Application.FileUtil" />
-      <item index="4" class="java.lang.String" itemvalue="Application.LevelCode" />
+      <item index="1" class="java.lang.String" itemvalue="Application.DecodeSubject" />
+      <item index="2" class="java.lang.String" itemvalue="Application.FileUtil" />
+      <item index="3" class="java.lang.String" itemvalue="Application.LevelCode" />
+      <item index="4" class="java.lang.String" itemvalue="Application.PDFUtil" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Application.Index" />
-        <item index="1" class="java.lang.String" itemvalue="Application.DecodeSubject" />
-        <item index="2" class="java.lang.String" itemvalue="Application.LevelCode" />
-        <item index="3" class="java.lang.String" itemvalue="Application.FileUtil" />
-        <item index="4" class="java.lang.String" itemvalue="Application.Summary" />
+        <item index="0" class="java.lang.String" itemvalue="Application.PDFUtil" />
+        <item index="1" class="java.lang.String" itemvalue="Application.Index" />
+        <item index="2" class="java.lang.String" itemvalue="Application.DecodeSubject" />
+        <item index="3" class="java.lang.String" itemvalue="Application.LevelCode" />
+        <item index="4" class="java.lang.String" itemvalue="Application.FileUtil" />
       </list>
     </recent_temporary>
   </component>
@@ -574,8 +602,9 @@
         <state relative-caret-position="1139">
           <caret line="67" column="33" lean-forward="false" selection-start-line="67" selection-start-column="33" selection-end-line="67" selection-end-column="33" />
           <folding>
-            <element signature="e#0#2803#0" expanded="true" />
+            <element signature="e#0#2848#0" expanded="true" />
             <element signature="imports" expanded="true" />
+            <element signature="e#710#754#1" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -585,9 +614,10 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="e#0#3006#0" expanded="true" />
+            <element signature="e#0#3369#0" expanded="true" />
             <element signature="imports" expanded="true" />
-            <element signature="e#759#760#0" expanded="true" />
+            <element signature="e#619#663#1" expanded="true" />
+            <element signature="e#804#805#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -610,6 +640,8 @@
           <caret line="50" column="0" lean-forward="true" selection-start-line="50" selection-start-column="0" selection-end-line="50" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#2925#2926#0" expanded="true" />
+            <element signature="e#2958#2959#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -632,8 +664,9 @@
         <state relative-caret-position="527">
           <caret line="31" column="36" lean-forward="false" selection-start-line="31" selection-start-column="36" selection-end-line="31" selection-end-column="36" />
           <folding>
-            <element signature="e#0#2803#0" expanded="true" />
+            <element signature="e#0#2848#0" expanded="true" />
             <element signature="imports" expanded="true" />
+            <element signature="e#710#754#1" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -643,9 +676,10 @@
         <state relative-caret-position="17">
           <caret line="15" column="0" lean-forward="false" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
           <folding>
-            <element signature="e#0#3006#0" expanded="true" />
+            <element signature="e#0#3369#0" expanded="true" />
             <element signature="imports" expanded="true" />
-            <element signature="e#759#760#0" expanded="true" />
+            <element signature="e#619#663#1" expanded="true" />
+            <element signature="e#804#805#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -668,6 +702,8 @@
           <caret line="24" column="18" lean-forward="false" selection-start-line="24" selection-start-column="18" selection-end-line="24" selection-end-column="18" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#2925#2926#0" expanded="true" />
+            <element signature="e#2958#2959#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -690,8 +726,9 @@
         <state relative-caret-position="527">
           <caret line="31" column="36" lean-forward="true" selection-start-line="31" selection-start-column="36" selection-end-line="31" selection-end-column="36" />
           <folding>
-            <element signature="e#0#2803#0" expanded="true" />
+            <element signature="e#0#2848#0" expanded="true" />
             <element signature="imports" expanded="true" />
+            <element signature="e#710#754#1" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -701,9 +738,10 @@
         <state relative-caret-position="17">
           <caret line="15" column="0" lean-forward="true" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
           <folding>
-            <element signature="e#0#3006#0" expanded="true" />
+            <element signature="e#0#3369#0" expanded="true" />
             <element signature="imports" expanded="true" />
-            <element signature="e#759#760#0" expanded="true" />
+            <element signature="e#619#663#1" expanded="true" />
+            <element signature="e#804#805#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -726,6 +764,8 @@
           <caret line="24" column="18" lean-forward="true" selection-start-line="24" selection-start-column="18" selection-end-line="24" selection-end-column="18" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#2925#2926#0" expanded="true" />
+            <element signature="e#2958#2959#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -736,46 +776,15 @@
           <caret line="27" column="24" lean-forward="true" selection-start-line="27" selection-start-column="24" selection-end-line="27" selection-end-column="24" />
           <folding>
             <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/QRGenerator.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="214">
-          <caret line="31" column="44" lean-forward="false" selection-start-line="31" selection-start-column="44" selection-end-line="31" selection-end-column="44" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/FileUtil.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="393">
-          <caret line="50" column="37" lean-forward="false" selection-start-line="50" selection-start-column="37" selection-end-line="50" selection-end-column="37" />
-          <folding>
-            <element signature="e#0#3006#0" expanded="true" />
-            <element signature="imports" expanded="true" />
-            <element signature="e#759#760#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/LevelCode.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="227">
-          <caret line="29" column="5" lean-forward="false" selection-start-line="29" selection-start-column="5" selection-end-line="29" selection-end-column="5" />
-          <folding>
-            <element signature="e#0#3101#0" expanded="true" />
-            <element signature="imports" expanded="true" />
+            <element signature="e#2925#2926#0" expanded="true" />
+            <element signature="e#2958#2959#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/DecodeSubject.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="293">
+        <state relative-caret-position="601">
           <caret line="47" column="33" lean-forward="false" selection-start-line="47" selection-start-column="33" selection-end-line="47" selection-end-column="33" />
           <folding>
             <element signature="e#0#4524#0" expanded="true" />
@@ -785,9 +794,32 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/LevelCode.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="312">
+          <caret line="29" column="5" lean-forward="false" selection-start-line="29" selection-start-column="5" selection-end-line="29" selection-end-column="5" />
+          <folding>
+            <element signature="e#0#3101#0" expanded="true" />
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Summary.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="788">
+          <caret line="66" column="54" lean-forward="false" selection-start-line="66" selection-start-column="54" selection-end-line="66" selection-end-column="54" />
+          <folding>
+            <element signature="e#0#2848#0" expanded="true" />
+            <element signature="imports" expanded="true" />
+            <element signature="e#710#754#1" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/Index.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="425">
+        <state relative-caret-position="-799">
           <caret line="25" column="24" lean-forward="false" selection-start-line="25" selection-start-column="24" selection-end-line="25" selection-end-column="24" />
           <folding>
             <element signature="e#0#4120#0" expanded="true" />
@@ -798,13 +830,40 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Summary.java">
+    <entry file="file://$PROJECT_DIR$/src/QRGenerator.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="482">
-          <caret line="68" column="53" lean-forward="false" selection-start-line="68" selection-start-column="53" selection-end-line="68" selection-end-column="53" />
+        <state relative-caret-position="737">
+          <caret line="81" column="26" lean-forward="false" selection-start-line="81" selection-start-column="26" selection-end-line="81" selection-end-column="26" />
           <folding>
-            <element signature="e#0#2803#0" expanded="true" />
             <element signature="imports" expanded="true" />
+            <element signature="e#2925#2926#0" expanded="true" />
+            <element signature="e#2958#2959#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/PDFUtil.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="22" column="0" lean-forward="false" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#1412#0" expanded="true" />
+            <element signature="imports" expanded="true" />
+            <element signature="e#774#775#0" expanded="true" />
+            <element signature="e#806#807#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/FileUtil.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="788">
+          <caret line="73" column="13" lean-forward="true" selection-start-line="73" selection-start-column="13" selection-end-line="73" selection-end-column="13" />
+          <folding>
+            <element signature="e#0#3369#0" expanded="true" />
+            <element signature="imports" expanded="true" />
+            <element signature="e#619#663#1" expanded="true" />
+            <element signature="e#804#805#0" expanded="true" />
           </folding>
         </state>
       </provider>

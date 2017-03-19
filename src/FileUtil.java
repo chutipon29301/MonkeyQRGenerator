@@ -17,6 +17,7 @@
 import java.io.File;
 import java.util.ArrayList;
 
+@SuppressWarnings("SpellCheckingInspection")
 class FileUtil {
 
     private String levelCode;
@@ -39,7 +40,10 @@ class FileUtil {
 
         for (int i = 0; i < qrList.size(); i++) {
             String savePath = "\\\\192.168.1.150\\workingplace\\TO ADMIN\\QRCODE OUT";
-            qrList.get(i).saveTo(savePath + "\\" + levelCode.substring(0,levelCode.indexOf('(')) + savedName[i] + levelCode.substring(levelCode.indexOf('(')) + ".png");
+            qrList.get(i).saveTo(savePath + "\\" + levelCode.substring(0, levelCode.indexOf('(')) + savedName[i] + levelCode.substring(levelCode.indexOf('(')) + ".png");
+            System.out.println(qrList.get(i).getPathName().replace("/", "\\").replace("file:\\\\monkeycloud", "\\\\192.168.1.150"));
+            PDFUtil pdfGenerator = new PDFUtil(qrList.get(i).getPathName().replace("/", "\\").replace("file:\\\\monkeycloud", "\\\\192.168.1.150"));
+            pdfGenerator.create();
         }
     }
 

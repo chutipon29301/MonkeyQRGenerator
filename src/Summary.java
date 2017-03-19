@@ -21,6 +21,7 @@ import javax.swing.border.EmptyBorder;
 import java.awt.Font;
 import java.util.ArrayList;
 
+@SuppressWarnings("SpellCheckingInspection")
 class Summary extends JFrame {
 
     private static String levelName;
