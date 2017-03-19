@@ -78,7 +78,7 @@ class QRGenerator {
         System.out.println("File saved:" + filePath);
     }
 
-    String getPathName(){
+    String getPathName() {
         return myCodeText;
     }
 }

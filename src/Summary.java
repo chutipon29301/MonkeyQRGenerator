@@ -29,21 +29,6 @@ class Summary extends JFrame {
     private static String levelRev;
 
     /**
-     * Launch the application.
-     */
-    static void run(String levelName) {
-        Summary.levelName = levelName;
-        EventQueue.invokeLater(() -> {
-            try {
-                Summary frame = new Summary();
-                frame.setVisible(true);
-            } catch (Exception e) {
-                e.printStackTrace();
-            }
-        });
-    }
-
-    /**
      * Create the frame.
      */
     private Summary() {
@@ -75,6 +60,21 @@ class Summary extends JFrame {
             label.get(i).setBounds(37, 48 + (i * 30), 361, 202);
             contentPane.add(label.get(i));
         }
+    }
+
+    /**
+     * Launch the application.
+     */
+    static void run(String levelName) {
+        Summary.levelName = levelName;
+        EventQueue.invokeLater(() -> {
+            try {
+                Summary frame = new Summary();
+                frame.setVisible(true);
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+        });
     }
 
     private void setLevelCode() {

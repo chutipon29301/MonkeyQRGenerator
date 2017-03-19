@@ -22,24 +22,8 @@ import javax.swing.*;
 import javax.swing.border.EmptyBorder;
 
 public class Index extends JFrame {
-
-    static final String KEY_LOCATION = "//monkeycloud/key-qrcode/";
-
+    
     private JTextField textField;
-
-    /**
-     * Launch the application.
-     */
-    public static void main(String[] args) {
-        EventQueue.invokeLater(() -> {
-            try {
-                Index frame = new Index();
-                frame.setVisible(true);
-            } catch (Exception e) {
-                e.printStackTrace();
-            }
-        });
-    }
 
     /**
      * Create the frame.
@@ -89,6 +73,20 @@ public class Index extends JFrame {
             }
         });
         contentPane.add(btnQRCode);
+    }
+
+    /**
+     * Launch the application.
+     */
+    public static void main(String[] args) {
+        EventQueue.invokeLater(() -> {
+            try {
+                Index frame = new Index();
+                frame.setVisible(true);
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+        });
     }
 
     private void generate() {

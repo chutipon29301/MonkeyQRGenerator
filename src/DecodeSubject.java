@@ -90,7 +90,7 @@ class DecodeSubject {
             destinationHotkeyPath = commonPath
                     + "HOTKEY"
                     + subjectCode.substring(subjectCode.indexOf('('), subjectCode.indexOf(')') + 1) + ".pdf";
-            destinationHotkeyPath = destinationHotkeyPath.replace("key-qrcode","key-student");
+            destinationHotkeyPath = destinationHotkeyPath.replace("key-qrcode", "key-student");
 
             destinationSkillPath = commonPath
                     + "SKILLKEY"
