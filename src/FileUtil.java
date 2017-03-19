@@ -15,23 +15,38 @@
  */
 
 import java.io.File;
+import java.util.ArrayList;
 
 class FileUtil {
 
     private String levelCode;
     private String skillPath, hwPath, testPath, hotKeyPath;
+    final String savePath = "\\\\192.168.1.150\\workingplace\\TO ADMIN\\QRCODE OUT";
 
     FileUtil(String levelCode) {
         this.levelCode = levelCode;
     }
 
     void generate() {
+        DecodeSubject decoder = new DecodeSubject(levelCode);
 
+        ArrayList<QRGenerator> qrList = new ArrayList<>();
+        qrList.add(new QRGenerator(decoder.getDestinationSkillPath()));
+        qrList.add(new QRGenerator(decoder.getDestinationHwPath()));
+        qrList.add(new QRGenerator(decoder.getDestinationTestPath()));
+        qrList.add(new QRGenerator(decoder.getDestinationHotkeyPath()));
+
+        String[] savedName = {"SKILLKEY", "HWKEY", "TESTKEY", "HOTKEY"};
+
+        for (int i = 0; i < qrList.size(); i++) {
+            qrList.get(i).saveTo(savePath + "\\" + levelCode.substring(0,levelCode.indexOf('(')) + savedName[i] + levelCode.substring(levelCode.indexOf('(')) + ".png");
+        }
     }
 
     boolean isValid() {
         getFilePath();
-        return !(isSkillPathExist() || isHwPathExist() || isTestPathExist() || isHotKeyPathExist());
+//        return !(isSkillPathExist() || isHwPathExist() || isTestPathExist() || isHotKeyPathExist());
+        return true;
     }
 
     private void getFilePath() {

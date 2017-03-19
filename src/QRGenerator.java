@@ -33,7 +33,7 @@ import java.util.Map;
 public class QRGenerator {
     private String myCodeText;
 
-    public QRGenerator(String pathName) {
+    QRGenerator(String pathName) {
         myCodeText = pathName;
     }
 
@@ -77,6 +77,6 @@ public class QRGenerator {
         } catch (WriterException | IOException e) {
             e.printStackTrace();
         }
-        System.out.println("\n\nYou have successfully created QR Code.");
+        System.out.println("File saved:" + filePath);
     }
 }
