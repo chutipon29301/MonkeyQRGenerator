@@ -21,7 +21,6 @@ class FileUtil {
 
     private String levelCode;
     private String skillPath, hwPath, testPath, hotKeyPath;
-    final String savePath = "\\\\192.168.1.150\\workingplace\\TO ADMIN\\QRCODE OUT";
 
     FileUtil(String levelCode) {
         this.levelCode = levelCode;
@@ -39,12 +38,17 @@ class FileUtil {
         String[] savedName = {"SKILLKEY", "HWKEY", "TESTKEY", "HOTKEY"};
 
         for (int i = 0; i < qrList.size(); i++) {
+            String savePath = "\\\\192.168.1.150\\workingplace\\TO ADMIN\\QRCODE OUT";
             qrList.get(i).saveTo(savePath + "\\" + levelCode.substring(0,levelCode.indexOf('(')) + savedName[i] + levelCode.substring(levelCode.indexOf('(')) + ".png");
         }
     }
 
     boolean isValid() {
         getFilePath();
+        System.out.println(skillPath);
+        System.out.println(hwPath);
+        System.out.println(testPath);
+        System.out.println(hotKeyPath);
         return !(isSkillPathExist() || isHwPathExist() || isTestPathExist() || isHotKeyPathExist());
     }
 

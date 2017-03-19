@@ -29,14 +29,6 @@ class LevelCode {
         getCodeArray();
     }
 
-    public static void main(String[] args) {
-        LevelCode temp = new LevelCode("MJ-BB01a(REV1_0)");
-        for (String text : temp.codePath) {
-            System.out.println(text + ", ");
-        }
-        System.out.println(temp.isValid());
-    }
-
     boolean isValid() {
         Collections.addAll(subLevelKey, "B", "I", "E", "P", "A", "T");
         Collections.addAll(subSheetKey, "a", "b", "c");

@@ -26,6 +26,32 @@ class DecodeSubject {
         decode();
     }
 
+    public static void main(String[] args) {
+
+        DecodeSubject a = new DecodeSubject("MK-BB02b(REV1_0).");
+        System.out.println("OUT:\t" + a.getDestinationSkillPath());
+        System.out.println("IN:\t\tfile://monkeycloud/key-qrcode/MATH/MK-B/MK-B(REV1)/MK-BB02/MK-BB02bSKILLKEY(REV1_0).pdf");
+        System.out.println("file://monkeycloud/key-qrcode/MATH/MK-B/MK-B(REV1)/MK-BB02/MK-BB02bSKILLKEY(REV1_0).pdf".equals(a.getDestinationSkillPath()));
+        System.out.println("--------------------------------------------------------------------------------------------------------");
+
+        DecodeSubject b = new DecodeSubject("MK-AB09a(REV1_0)");
+        System.out.println("OUT:\t" + b.getDestinationHotkeyPath());
+        System.out.println("IN:\t\tfile://monkeycloud/key-student/MATH/MK-A/MK-AB09/MK-AB09a/MK-AB09aHOTKEY(REV1_0).pdf");
+        System.out.println("file://monkeycloud/key-student/MATH/MK-A/MK-AB09/MK-AB09a/MK-AB09aHOTKEY(REV1_0).pdf".equals(b.getDestinationHotkeyPath()));
+        System.out.println("--------------------------------------------------------------------------------------------------------");
+
+        DecodeSubject c = new DecodeSubject("MJ-XGA04(REV2_0)");
+        System.out.println("OUT:\t" + c.getDestinationHotkeyPath());
+        System.out.println("IN:\t\tfile://monkeycloud/key-student/MATH/MJ-XG/MJ-XG(REV2)/MJ-XGA04/MJ-XGA04HOTKEY(REV2_0).pdf");
+        System.out.println("file://monkeycloud/key-student/MATH/MJ-XG/MJ-XG(REV2)/MJ-XGA04/MJ-XGA04HOTKEY(REV2_0).pdf".equals(c.getDestinationHotkeyPath()));
+        System.out.println("--------------------------------------------------------------------------------------------------------");
+
+        DecodeSubject d = new DecodeSubject("MJ-XGA04(REV2_0)");
+        System.out.println("OUT:\t" + d.getDestinationSkillPath());
+        System.out.println("IN:\t\tfile://monkeycloud/key-qrcode/MATH/MJ-XG/MJ-XG(REV2)/MJ-XGA04/MJ-XGA04SKILLKEY(REV2_0).pdf");
+        System.out.println("file://monkeycloud/key-qrcode/MATH/MJ-XG/MJ-XG(REV2)/MJ-XGA04/MJ-XGA04SKILLKEY(REV2_0).pdf".equals(d.getDestinationSkillPath()));
+    }
+
     String getDestinationSkillPath() {
         return destinationSkillPath;
     }
@@ -55,35 +81,58 @@ class DecodeSubject {
             default:
                 return false;
         }
-        commonPath += subjectCode.substring(0, getIndexOfFirstNum() - 1) + "/";
-        destinationHotkeyPath += subjectCode.substring(0, getIndexOfFirstNum() - 1) + "/";
 
+        try {
+            commonPath += subjectCode.substring(0, getIndexOfFirstNum() - 1) + "/";
+            destinationHotkeyPath += subjectCode.substring(0, getIndexOfFirstNum() - 1) + "/";
+        } catch (Exception e) {
+            return false;
+        }
 
-        commonPath += subjectCode.substring(0, getIndexOfFirstNum() - 1)
-                + subjectCode.substring(subjectCode.indexOf('('), subjectCode.lastIndexOf('_'))
-                + ")/"
-                + subjectCode.substring(0, subjectCode.indexOf('('))
-                + "/"
-                + subjectCode.substring(0, subjectCode.indexOf('('));
+        if (isSubLevel()) {
+            try {
+                commonPath += subjectCode.substring(0, getIndexOfFirstNum() - 1)
+                        + subjectCode.substring(subjectCode.indexOf('('), subjectCode.lastIndexOf('_'))
+                        + ")/"
+                        + subjectCode.substring(0, subjectCode.indexOf('(') - 1)
+                        + "/"
+                        + subjectCode.substring(0, subjectCode.indexOf('('));
+            } catch (Exception e) {
+                return false;
+            }
+        } else {
+            try {
+                commonPath += subjectCode.substring(0, getIndexOfFirstNum() - 1)
+                        + subjectCode.substring(subjectCode.indexOf('('), subjectCode.lastIndexOf('_'))
+                        + ")/"
+                        + subjectCode.substring(0, subjectCode.indexOf('('))
+                        + "/"
+                        + subjectCode.substring(0, subjectCode.indexOf('('));
+            } catch (Exception e) {
+                return false;
+            }
+        }
+        try {
+            destinationHotkeyPath = commonPath
+                    + "HOTKEY"
+                    + subjectCode.substring(subjectCode.indexOf('('), subjectCode.indexOf(')') + 1) + ".pdf";
+            destinationHotkeyPath = destinationHotkeyPath.replace("key-qrcode","key-student");
 
-        destinationHotkeyPath += subjectCode.substring(0, subjectCode.indexOf('('))
-                + "/";
+            destinationSkillPath = commonPath
+                    + "SKILLKEY"
+                    + subjectCode.substring(subjectCode.indexOf('('), subjectCode.indexOf(')') + 1) + ".pdf";
 
-        destinationSkillPath = commonPath
-                + "SKILLKEY"
-                + subjectCode.substring(subjectCode.indexOf('('), subjectCode.indexOf(')') + 1) + ".pdf";
+            destinationHwPath = commonPath
+                    + "HWKEY"
+                    + subjectCode.substring(subjectCode.indexOf('('), subjectCode.indexOf(')') + 1) + ".pdf";
 
-        destinationHwPath = commonPath
-                + "HWKEY"
-                + subjectCode.substring(subjectCode.indexOf('('), subjectCode.indexOf(')') + 1) + ".pdf";
+            destinationTestPath = commonPath
+                    + "TESTKEY"
+                    + subjectCode.substring(subjectCode.indexOf('('), subjectCode.indexOf(')') + 1) + ".pdf";
 
-        destinationTestPath = commonPath
-                + "TESTKEY"
-                + subjectCode.substring(subjectCode.indexOf('('), subjectCode.indexOf(')') + 1) + ".pdf";
-
-        destinationHotkeyPath += subjectCode.substring(0, subjectCode.indexOf('('))
-                + "HOTKEY" + subjectCode.substring(subjectCode.indexOf('('), subjectCode.indexOf(')') + 1) + ".pdf";
-
+        } catch (Exception e) {
+            return false;
+        }
         return true;
     }
 
@@ -98,5 +147,9 @@ class DecodeSubject {
             }
         }
         return index;
+    }
+
+    private boolean isSubLevel() {
+        return !Character.isDigit(subjectCode.charAt(subjectCode.indexOf('(') - 1));
     }
 }

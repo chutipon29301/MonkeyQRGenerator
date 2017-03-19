@@ -30,7 +30,7 @@ import java.util.EnumMap;
 import java.util.Map;
 
 @SuppressWarnings("SpellCheckingInspection")
-public class QRGenerator {
+class QRGenerator {
     private String myCodeText;
 
     QRGenerator(String pathName) {
@@ -38,7 +38,7 @@ public class QRGenerator {
     }
 
     @SuppressWarnings("SuspiciousNameCombination")
-    public void saveTo(String filePath) {
+    void saveTo(String filePath) {
 //        myCodeText = "file://monkeycloud/key-qrcode/MATH/MK-D/MK-D(REV1)/MK-DB06/MK-DB06aSKILLKEY(REV1_0).pdf";
 //        String filePath = "C:\\Users\\adminmac\\Desktop\\New folder\\temp.png";
         int size = 250;
