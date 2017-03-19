@@ -14,26 +14,57 @@
  limitations under the License.
  */
 
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Objects;
+
 class LevelCode {
     private String levelCode;
     private String[] codePath = new String[6];
+    private ArrayList<String> subLevelKey = new ArrayList<>();
+    private ArrayList<String> subSheetKey = new ArrayList<>();
 
     LevelCode(String levelCode) {
         this.levelCode = levelCode;
         getCodeArray();
     }
 
+    public static void main(String[] args) {
+        LevelCode temp = new LevelCode("MJ-BB01a(REV1_0)");
+        for (String text : temp.codePath) {
+            System.out.println(text + ", ");
+        }
+        System.out.println(temp.isValid());
+    }
+
     boolean isValid() {
-        return false;
+        Collections.addAll(subLevelKey, "B", "I", "E", "P", "A", "T");
+        Collections.addAll(subSheetKey, "a", "b", "c");
+        return (codePath[0] != null && codePath[0].length() == 2) &&
+                codePath[1] != null &&
+                (codePath[2] != null && subLevelKey.contains(codePath[2])) &&
+                (codePath[4] == null || subSheetKey.contains(codePath[4]));
     }
 
     private void getCodeArray() {
-        codePath[0] = levelCode.substring(0, levelCode.indexOf('-'));
-        codePath[1] = levelCode.substring(levelCode.indexOf('-') + 1, getIndexOfFirstNumber() - 1);
-        codePath[2] = String.valueOf(levelCode.charAt(getIndexOfFirstNumber() - 1));
-        codePath[3] = levelCode.substring(getIndexOfFirstNumber(), getIndexOfFirstNumber() + 2);
-        codePath[4] = ((levelCode.charAt(getIndexOfFirstNumber() + 2) == '(') ? null : String.valueOf(levelCode.charAt(getIndexOfFirstNumber() + 2)));
-        codePath[5] = levelCode.substring(levelCode.indexOf('(') + 1, levelCode.indexOf(')'));
+        codePath[0] = (Objects.equals(levelCode.substring(0, levelCode.indexOf('-')), "")) ?
+                null :
+                levelCode.substring(0, levelCode.indexOf('-'));
+        codePath[1] = (Objects.equals(levelCode.substring(levelCode.indexOf('-') + 1, getIndexOfFirstNumber() - 1), "")) ?
+                null :
+                levelCode.substring(levelCode.indexOf('-') + 1, getIndexOfFirstNumber() - 1);
+        codePath[2] = (Objects.equals(String.valueOf(levelCode.charAt(getIndexOfFirstNumber() - 1)), "")) ?
+                null :
+                String.valueOf(levelCode.charAt(getIndexOfFirstNumber() - 1));
+        codePath[3] = (Objects.equals(levelCode.substring(getIndexOfFirstNumber(), getIndexOfFirstNumber() + 2), "")) ?
+                null :
+                levelCode.substring(getIndexOfFirstNumber(), getIndexOfFirstNumber() + 2);
+        codePath[4] = (levelCode.charAt(getIndexOfFirstNumber() + 2) == '(') ?
+                null :
+                String.valueOf(levelCode.charAt(getIndexOfFirstNumber() + 2));
+        codePath[5] = (Objects.equals(levelCode.substring(levelCode.indexOf('(') + 1, levelCode.indexOf(')')), "")) ?
+                null :
+                levelCode.substring(levelCode.indexOf('(') + 1, levelCode.indexOf(')'));
     }
 
     private int getIndexOfFirstNumber() {
@@ -47,12 +78,5 @@ class LevelCode {
             }
         }
         return index;
-    }
-
-    public static void main(String[] args) {
-        LevelCode temp = new LevelCode("MJ-BB01(REV1_0)");
-        for (String text : temp.codePath) {
-            System.out.println(text + ", ");
-        }
     }
 }
