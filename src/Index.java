@@ -81,11 +81,11 @@ public class Index extends JFrame {
         contentPane.add(btnGenerate);
 
         JButton btnQRCode = new JButton("QRCode");
-        btnQRCode.setBounds(162,197,100,31);
+        btnQRCode.setBounds(162, 197, 100, 31);
         btnQRCode.addMouseListener(new MouseAdapter() {
             @Override
             public void mouseClicked(MouseEvent e) {
-
+                generateQR();
             }
         });
         contentPane.add(btnQRCode);
@@ -98,8 +98,16 @@ public class Index extends JFrame {
         if (testValid.isValid()) {
             testValid.generate();
             Summary.run(inputText);
-        }else {
+        } else {
             JOptionPane.showMessageDialog(null, "Can't create QRCode, key already exist", "Error: File already exist", JOptionPane.INFORMATION_MESSAGE);
         }
+    }
+
+    private void generateQR() {
+        String inputText = textField.getText();
+        FileUtil testValid = new FileUtil(inputText);
+        textField.setText("");
+        testValid.generate();
+        Summary.run(inputText);
     }
 }
