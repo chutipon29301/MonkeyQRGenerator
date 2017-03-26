@@ -52,6 +52,10 @@ class DecodeSubject {
                 commonPath += "PHYSICS/";
                 destinationHotkeyPath += "PHYSICS/";
                 break;
+            case 'C':
+                commonPath += "CHEMISTRY/";
+                destinationHotkeyPath += "CHEMISTRY/";
+                break;
             default:
                 return false;
         }

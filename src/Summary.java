@@ -62,9 +62,6 @@ class Summary extends JFrame {
         }
     }
 
-    /**
-     * Launch the application.
-     */
     static void run(String levelName) {
         Summary.levelName = levelName;
         EventQueue.invokeLater(() -> {
