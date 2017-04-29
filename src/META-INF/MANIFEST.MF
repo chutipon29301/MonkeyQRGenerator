@@ -1,13 +1,3 @@
 Manifest-Version: 1.0
-Class-Path: org.eclipse.ui.forms_3.7.0.v20160518-1929.jar com.ibm.icu_
- 56.1.0.v201601250100.jar org.eclipse.jface.text_3.11.1.v20160819-1517
- .jar org.eclipse.osgi_3.11.1.v20160708-1632.jar org.eclipse.ui.workbe
- nch_3.108.1.v20160819-2118.jar org.eclipse.equinox.registry_3.6.100.v
- 20160223-2218.jar core-3.2.1.jar org.eclipse.text_3.6.0.v20160503-184
- 9.jar org.eclipse.core.runtime_3.12.0.v20160606-1342.jar org.eclipse.
- equinox.common_3.8.0.v20160509-1230.jar pdfbox-app-2.0.4.jar org.ecli
- pse.swt.win32.win32.x86_64_3.105.1.v20160907-0248.jar org.eclipse.jfa
- ce_3.12.0.v20160518-1929.jar org.eclipse.core.commands_3.8.0.v2016031
- 6-1921.jar
 Main-Class: Index
 
